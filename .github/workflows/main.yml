@@ -1,18 +1,16 @@
-
-
 # .github/workflows/main.yml
 name: Main Workflow
 
 on:
   push:
     branches:
-      - workflow
+      - main
 
 jobs:
   setup:
     uses: ./.github/workflows/setup.yml
     with:
-      branch: "workflow"  # Pass the branch name as an input
+      branch: "main"  # Pass the branch name as an input
 
   build:
     runs-on: ubuntu-latest
